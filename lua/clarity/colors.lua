@@ -7,7 +7,9 @@ colors.get = function()
         foreground    = "#bdb395",
 
         green         = "#31B72C",
-        light_blue    = "#2ca198"
+        light_blue    = "#2ca198",
+        light_green   = "#86E08F",
+        white         = "#ffffff"
     }
 end
 
