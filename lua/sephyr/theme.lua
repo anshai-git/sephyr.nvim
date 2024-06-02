@@ -17,15 +17,28 @@ theme.set_highlights = function(opts)
     hl(0, "StatusLineNC", { fg = c.foreground, bg = c.background })
     hl(0, "Function", { fg = c.white, bg = "NONE" })
     hl(0, "Macro", { fg = c.light_green, bg = "NONE" })
+    hl(0, "Type", { fg = c.foreground, bg = "NONE" })
+
+    hl(0, "@annotation", { fg = c.foreground, bg = "NONE" })
 
     -- LSP
-    hl(0, "@keyword", { fg = c.white, bg = c.background })
-    hl(0, "@keyword.function", { fg = c.white, bg = c.background })
-    hl(0, "@keyword.operator", { fg = c.white, bg = c.background })
-    hl(0, "@keyword.coroutine", { fg = c.white, bg = c.background })
-    hl(0, "@keyword.return", { fg = c.white, bg = c.background })
-    hl(0, "@function.macro", { fg = c.light_green, bg = c.background })
+    hl(0, "@keyword", { fg = c.white, bg = "NONE" })
+    hl(0, "@keyword.function", { fg = c.white, bg = "NONE" })
+    hl(0, "@keyword.operator", { fg = c.white, bg = "NONE" })
+    hl(0, "@keyword.coroutine", { fg = c.white, bg = "NONE" })
+    hl(0, "@keyword.return", { fg = c.white, bg = "NONE" })
+    hl(0, "@function.macro", { fg = c.light_green, bg = "NONE" })
+    hl(0, "@lsp.type.modifier", { fg = c.light_blue, bg = "NONE" })
+    hl(0, "@lsp.type.class", { fg = c.white, bg = "NONE" })
+    hl(0, "@lsp.type.interface", { fg = c.white, bg = "NONE" })
+    hl(0, "@lsp.type.decorator", { fg = c.white, bg = "NONE" })
+    hl(0, "@lsp.type.typeParameter", { fg = c.foreground, bg = "NONE" })
+    hl(0, "@lsp.type.parameter", { fg = c.foreground, bg = "NONE" })
     -- LSP end
+
+    -- Java
+    hl(0, "javaAnnotation", { fg = c.light_blue_2, bg = "NONE" })
+    -- Java End
 
 
     -- Git Signs
