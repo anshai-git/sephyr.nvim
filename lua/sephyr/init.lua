@@ -1,6 +1,6 @@
-local clarity = {}
-local theme = require 'clarity.theme'
-clarity.setup = function(user_opts)
+local sephyr = {}
+local theme = require 'sephyr.theme'
+sephyr.setup = function(user_opts)
   local defaults = {
     transparent = false,
     italic_comments = true,
@@ -10,9 +10,9 @@ clarity.setup = function(user_opts)
   }
 
   local global_settings_opts = vim.tbl_extend("force", defaults, {
-    transparent = (vim.g.clarity_transparent == true or vim.g.clarity_transparent == 1),
-    italic_comments = (vim.g.clarity_italic_comment == true or vim.g.clarity_italic_comment == 1),
-    disable_nvimtree_bg = (vim.g.clarity_disable_nvim_tree_bg == true or vim.g.clarity_disable_nvim_tree_bg == 1),
+    transparent = (vim.g.sephyr_transparent == true or vim.g.sephyr_transparent == 1),
+    italic_comments = (vim.g.sephyr_italic_comment == true or vim.g.sephyr_italic_comment == 1),
+    disable_nvimtree_bg = (vim.g.sephyr_disable_nvim_tree_bg == true or vim.g.sephyr_disable_nvim_tree_bg == 1),
   })
 
   local opts = vim.tbl_extend("force", global_settings_opts, user_opts)
@@ -23,7 +23,7 @@ clarity.setup = function(user_opts)
   end
 
   vim.o.termguicolors = true
-  vim.g.colors_name = "clarity"
+  vim.g.colors_name = "sephyr"
 
   theme.set_highlights(opts)
   theme.link_highlight()
@@ -33,4 +33,4 @@ clarity.setup = function(user_opts)
   end
 end
 
-return clarity
+return sephyr

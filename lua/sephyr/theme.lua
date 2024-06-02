@@ -2,7 +2,7 @@ local hl = vim.api.nvim_set_hl
 local theme = {}
 
 theme.set_highlights = function(opts)
-    local c = require("clarity.colors").get()
+    local c = require("sephyr.colors").get()
     c = vim.tbl_extend("force", c, opts["color_overrides"])
 
     hl(0, "Normal", { fg = c.foreground, bg = c.background })
@@ -14,7 +14,7 @@ theme.set_highlights = function(opts)
 
     hl(0, "ColorColumn", { fg = "NONE", bg = c.background })
     hl(0, "StatusLine", { fg = c.foreground, bg = c.background })
-    hl(0, "StatusLineNC", { fg = foreground, bg = c.background })
+    hl(0, "StatusLineNC", { fg = c.foreground, bg = c.background })
     hl(0, "Function", { fg = c.white, bg = "NONE" })
     hl(0, "Macro", { fg = c.light_green, bg = "NONE" })
 
