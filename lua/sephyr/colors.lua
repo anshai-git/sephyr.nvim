@@ -3,7 +3,7 @@ local colors = {}
 -- @return table<string,string>
 colors.get = function()
     return {
-        background    = "#031c1f",
+        background    = "#141b21",
         foreground    = "#bdb395",
 
         green         = "#31B72C",
